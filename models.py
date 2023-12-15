@@ -9,3 +9,4 @@ class Subjects(Base):
     teacher = Column(String)
     description = Column(String)
     year_long = Column(Boolean)
+    credits = Column(String)

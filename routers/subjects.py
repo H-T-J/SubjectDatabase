@@ -15,6 +15,7 @@ class Subject(BaseModel):
     teacher: str = Field(min_length=3)
     description: str = Field(min_length=2, max_length=150)
     year_long: bool = Field(default=False)
+    credits: str = Field()
 
     class Config:
         json_schema_extra = {
@@ -22,7 +23,8 @@ class Subject(BaseModel):
                 "name": "name of subject",
                 "teacher": "primary instructor of the subject",
                 "description": "brief description of the subject",
-                "year_long": False
+                "year_long": False,
+                "credits": "2"
             }
         }
 
